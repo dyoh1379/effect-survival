@@ -1,6 +1,7 @@
 # effect-survival
 
 1분마다 10초간 레벨 3에 해당하는 마인크래프트 내의 랜덤 물약 효과가 부여됩니다.
+___
 (instant_damage 와 instant_health 는 제외하였습니다.)
 ___
 명령어
