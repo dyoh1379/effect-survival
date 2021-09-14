@@ -1,0 +1,162 @@
+command /es [<text>]:
+	trigger:
+		if player is op:
+			if arg 1 is not set:
+				send "&6타입을 적어주세요."
+				stop
+			if arg 1 is "start":
+				set {effect.time} to 60
+				send "&a게임이 시작되었습니다."
+				stop
+			if arg 1 is "stop":
+				delete {effect.time}
+				send "&c게임이 종료되었습니다."
+
+every 1 seconds:
+	if {effect.time} > 0:
+		subtract 1 from {effect.time}
+	if {effect.time} is 0:
+		set {effect.random} to random integer between 1 to 29
+		if {effect.random} is 1:
+			apply absorption 3 to all players for 10 seconds
+			set {effect.time} to 60
+
+		if {effect.random} is 2:
+			apply bad omen 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'bad_omen' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 3:
+			apply luck 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'luck' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 4:
+			apply conduit power 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'conduit_power' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 5:
+			apply dolphins grace 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'dolphins_grace' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 6:
+			apply haste 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'haste' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 7:
+			apply health boost 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'health_boost' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 8:
+			apply hero of the village 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'hero_of_the_village' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 9:
+			apply hunger 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'hunger' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 10:
+			apply invisibility 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'invisibility' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 11:
+			apply jump boost 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'jump_boost' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 12:
+			apply levitation 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'levitation' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 13:
+			apply blindness 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'blindness' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 14:
+			apply mining fatigue 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'mining_fatigue' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 15:
+			apply nausea 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'nausea' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 16:
+			apply night vision 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'night_vision' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 17:
+			apply poison 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'poison' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 18:
+			apply regeneration 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'regeneration' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 19:
+			apply resistance 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'resistance' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 20:
+			apply saturation 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'saturation' 효과가 적용되었습니다." to all players
+			
+		if {effect.random} is 21:
+			apply slow falling 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'slow_falling' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 22:
+			apply speed 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'speed' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 23:
+			apply strength 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'strength' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 24:
+			apply unluck 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'unluck' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 25:
+			apply water breathing 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'water_breathing' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 26:
+			apply weakness 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'weakness' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 27:
+			apply wither 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'wither' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 28:
+			apply fire resistance 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'fire_resistance' 효과가 적용되었습니다." to all players
+
+		if {effect.random} is 29:
+			apply glowing 3 to all players for 10 seconds
+			set {effect.time} to 60
+			send action bar "'glowing' 효과가 적용되었습니다." to all players
